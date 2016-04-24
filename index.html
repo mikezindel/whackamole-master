@@ -1,0 +1,121 @@
+<script src="jquery.js"></script>
+<script src="jquerymobile.js"></script>
+<script type="text/javascript" src="dbAPI.js"></script>
+<script type="text/javascript" src="ranking.js"></script>
+<script type="text/javascript" src="whackamole.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script>
+<script type="text/javascript" src="firebase.js"></script>
+<script type="text/javascript" src="angular.js"></script>
+<script type="text/javascript" src="angularfire.js"></script>
+<link rel="stylesheet" type="text/css" href="style.css"/>
+<link rel="stylesheet" type="text/css" href="jquerymobile.css"/>
+<link rel="stylesheet" type="text/css" href="bootstrap.css"/>
+<head>
+	<meta name="viewport" content="user-scalable=no, initial-scale=0.9, maximum-scale=0.9, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+</head>
+
+<body>
+<div data-role="page" id="pageone">
+  <div data-role="header">
+    <h1>Whack-a-Mole jQuery</h1>
+  </div>
+	<div data-role="main" class="ui-content">
+	  <h2>Ranking</h2>
+		<div class="container ranking">
+			<div class="row">
+				<div class="col-xs-4">1st</div>
+				<div class="col-xs-4" id="name1"></div>
+				<div class="col-xs-4" id="score1"></div>
+			</div>
+			<div class="row">
+			<div class="col-xs-4">2nd</div>
+				<div class="col-xs-4" id="name2"></div>
+				<div class="col-xs-4" id="score2"></div>
+			</div>
+			<div class="row">
+			<div class="col-xs-4">3rd</div>
+				<div class="col-xs-4" id="name3"></div>
+				<div class="col-xs-4" id="score3"></div>
+			</div>
+		</div>
+
+		<div id="showResult">
+			<hr>
+			<h3>Your score</h3>
+			<div class="container ranking">
+				<div id="scoreCurrent"></div>
+			</div>
+			<div id="boardRanking">
+				<hr>
+				<h3>Your name</h3>
+				<div class="container ranking">
+					<input type="text" id="nameCurrent">
+				</div>
+			</div>
+			<hr>
+		</div>
+		<button class="ui-btn" id="startGame">Start Game!</button>
+
+    <hr>
+    <p>Whack-a-Mole game for PROG8110</p>
+		<p>Computer Application Development - 2016</p>
+  </div>
+
+  <div data-role="footer">
+    <h1>Pedro, Mike and Takeshi &copy; 2016</h1>
+  </div>
+</div> 
+
+<div data-role="page" id="pagetwo">
+	<div class="GameInfo">
+		Points: <span id="points">0</span> &nbsp; Level: <span id="level">1</span> &nbsp; Tries: <span id="tries">20</span>
+	</div>
+	<div class="board">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+				<div class="col-xs-3"><div class="hole"></div></div>
+			</div>
+		</div>
+	</div>
+</div> 
+</body>
